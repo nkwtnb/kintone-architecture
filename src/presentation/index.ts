@@ -1,4 +1,4 @@
-import { Order } from "../domain/models/Order";
+import { Order } from "../domain/model/Order";
 
 (() => {
   kintone.events.on("app.record.index.show", async (e: any) => {
