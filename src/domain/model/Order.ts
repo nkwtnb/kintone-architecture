@@ -11,7 +11,6 @@ export class Order {
     const order = new Order(records);
     return order;
   }
-
   public sum(): number {
     let sum = 0;
     this.records.forEach((record: any) => {

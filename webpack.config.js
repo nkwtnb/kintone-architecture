@@ -1,25 +1,26 @@
 const { resolve } = require('path');
 
 module.exports = {
-  entry: './src/presentation/index.ts',
+  entry: './src/presentation/index.tsx',
   output: {
     filename: 'bundle.js',
     path: resolve(__dirname, 'dist')
   },
   resolve: {
-    extensions: ['.ts', '.js']
+    extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
   module: {
     rules: [
       {
-        test: [/\.js$/, /\.ts$/],
+        test: [/\.jsx?$/, /\.tsx?$/],
         use: [
           {
             loader: 'babel-loader',
             options: {
               presets: [
                 "@babel/preset-env",
-                "@babel/preset-typescript"
+                "@babel/preset-react",
+                "@babel/preset-typescript",
               ]
             }
           }
