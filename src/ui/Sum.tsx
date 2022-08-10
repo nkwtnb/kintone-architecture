@@ -10,6 +10,6 @@ export default () => {
     })();
   }, []);
   return (
-    <div>{sum}</div>
+    <div data-testid="sum">{sum}</div>
   );
 }
