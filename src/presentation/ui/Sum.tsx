@@ -11,9 +11,7 @@ export default () => {
     })();
   }, []);
   return (
-    <div style={{
-      backgroundColor: "rgb(254 247 184)"
-    }}>
+    <div>
       <div style={{
         textAlign: "right",
         marginRight: "100px",
