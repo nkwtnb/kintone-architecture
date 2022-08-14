@@ -3,12 +3,12 @@ import OrderService from "../../domain/services/OrderService";
 import { OrderRepository } from "../../infrastructure/repositories/OrderRepository";
 
 export default () => {
+  const repository = new OrderRepository();
+  const service = new OrderService();
   const [sum, setSum] = useState(0);
   useEffect(() => {
     (async () => {
-      const repository = new OrderRepository();
       const orders = await repository.getAll();
-      const service = new OrderService();
       setSum(service.sum(orders));
     })();
   }, []);
