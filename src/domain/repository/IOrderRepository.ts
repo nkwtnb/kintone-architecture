@@ -1,3 +1,5 @@
+import { Order } from "../model/Order";
+
 export interface IOrderRepository {
-  get(): Promise<Object[]>
+  getAll(): Promise<Order>
 }

@@ -6,8 +6,8 @@ import { act } from "react-dom/test-utils";
 
 describe("ui component[Sum]のテスト", () => {
   test("合計が表示されること", async () => {
-    await act(() => {
-      render(<Sum />);
+    await act(async () => {
+      await render(<Sum />);
     });
     expect(screen.getByTestId("sum")).toHaveTextContent("600");
   });

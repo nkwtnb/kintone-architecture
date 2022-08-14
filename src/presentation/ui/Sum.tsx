@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react"
-import { Order } from "../../domain/model/Order";
+import { OrderRepository } from "../../infra/repository/OrderRepository";
 
 export default () => {
   const [sum, setSum] = useState(0);
   useEffect(() => {
     (async () => {
-      const order = await Order.build();
-      
+      const repository = new OrderRepository();
+      const order = await repository.getAll();
       setSum(order.sum());
     })();
   }, []);
