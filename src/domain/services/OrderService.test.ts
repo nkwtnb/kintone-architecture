@@ -1,7 +1,7 @@
 import { OrderRepository } from "../../infrastructure/repositories/OrderRepository";
-import OrderService from "../services/OrderService";
+import OrderService from "./OrderService";
 
-describe("model[Order]のテスト", () => {
+describe("service[OrderService]のテスト", () => {
   test("sum()で合計されること", async () => {
     const repository = new OrderRepository();
     const orders = await repository.getAll();
